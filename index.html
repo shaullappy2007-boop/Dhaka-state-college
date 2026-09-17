@@ -310,7 +310,39 @@ footer p{
         grid-template-columns:1fr 1fr;
     }
 }
-</style>
+.hero-image{
+  width:100%;
+  margin:20px 0;
+  text-align:center;
+}
+.hero-image img{
+  width:100%;
+  height:auto;
+  display:block;
+  border-radius:16px;
+  box-shadow:0 6px 24px #0002;
+}
+.hero-buttons{
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  margin-top:15px;
+}
+.hero-buttons a{
+  background:#075db0;
+  color:#fff;
+  padding:10px 22px;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:bold;
+}
+.hero-buttons a:hover{
+  background:#073b7a;
+}
+@media(max-width:700px){
+  .hero-image{margin:15px 0}
+  .hero-buttons a{padding:9px 18px;font-size:14px}
+}</style>
 </head>
 
 <body>
