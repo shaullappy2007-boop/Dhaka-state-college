@@ -1,44 +1,502 @@
 <!DOCTYPE html>
-<html lang="bn"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Home - Dhaka State College</title><style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Arial,"Noto Sans Bengali",sans-serif;background:#f5f7fb;color:#172033;line-height:1.6}
-header{background:#073b7a;color:#fff;box-shadow:0 3px 12px #0002}
-.top{max-width:1100px;margin:auto;padding:12px 16px;display:flex;align-items:center;gap:12px}
-.logo{width:62px;height:62px;background:#fff;border-radius:50%;padding:4px;object-fit:contain}
-.title{flex:1}.title h1{font-size:24px}.title p{font-size:13px}
-.menu{position:relative}.menu button{border:0;background:#ffffff22;color:#fff;font-size:25px;padding:4px 11px;border-radius:8px}
-.dropdown{display:none;position:absolute;right:0;top:46px;background:#fff;color:#172033;width:220px;border-radius:9px;box-shadow:0 7px 25px #0003;z-index:10;overflow:hidden}
-.dropdown a{display:block;padding:10px 14px;border-bottom:1px solid #eee;text-decoration:none;color:#172033}
-.dropdown a:hover{background:#edf5ff;color:#0758a5}.menu:hover .dropdown{display:block}
-nav{background:#fff;border-bottom:1px solid #e5e9ef}
-.navin{max-width:1100px;margin:auto;display:flex;gap:4px;padding:7px 10px;overflow:auto}
-.navin a{white-space:nowrap;text-decoration:none;color:#172033;padding:8px 12px;border-radius:7px;font-weight:bold;font-size:14px}
-.navin a:hover,.navin .active{background:#eaf3ff;color:#0758a5}
-main{max-width:1100px;margin:25px auto;padding:0 16px;min-height:65vh}
-.hero{background:linear-gradient(135deg,#e8f3ff,#fff);padding:55px 20px;text-align:center;border-radius:16px}
-.hero h2{font-size:34px;color:#073b7a;margin-bottom:8px}.hero p{color:#596779}
-h2.section-title{color:#073b7a;border-left:5px solid #ffb703;padding-left:10px;margin-bottom:18px}
-.card{background:#fff;border:1px solid #e3e8ef;border-radius:12px;padding:20px;margin-bottom:15px;box-shadow:0 2px 10px #00000009}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
-.card h3{color:#0758a5;margin-bottom:7px}.card small{color:#7c8795}
-.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.photo{height:190px;border-radius:12px;background:linear-gradient(135deg,#cfe7ff,#eef6ff);display:flex;align-items:center;justify-content:center;color:#477096;font-weight:bold}
-.btn{display:inline-block;margin-top:10px;background:#075db0;color:white;padding:9px 15px;border-radius:7px;text-decoration:none;font-weight:bold}
-footer{background:#092d58;color:#dcecff;padding:25px 16px;text-align:center;margin-top:30px}
-@media(max-width:700px){.grid{grid-template-columns:1fr}.gallery{grid-template-columns:1fr 1fr}.title h1{font-size:19px}.logo{width:52px;height:52px}.hero h2{font-size:27px}}
-</style></head>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Home - Dhaka State College</title>
+
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:Arial,"Noto Sans Bengali",sans-serif;
+    background:#f4f7fb;
+    color:#172033;
+    line-height:1.6;
+}
+
+header{
+    background:linear-gradient(135deg,#063b7a,#075db0);
+    color:white;
+    box-shadow:0 3px 15px #0003;
+}
+
+.top{
+    max-width:1100px;
+    margin:auto;
+    padding:14px 16px;
+    display:flex;
+    align-items:center;
+    gap:14px;
+}
+
+.logo{
+    width:65px;
+    height:65px;
+    background:white;
+    border-radius:50%;
+    padding:4px;
+    object-fit:contain;
+}
+
+.title{
+    flex:1;
+}
+
+.title h1{
+    font-size:25px;
+}
+
+.title p{
+    font-size:13px;
+    opacity:.9;
+}
+
+.menu{
+    position:relative;
+}
+
+.menu button{
+    border:0;
+    background:#ffffff22;
+    color:white;
+    font-size:27px;
+    padding:3px 11px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.dropdown{
+    display:none;
+    position:absolute;
+    right:0;
+    top:45px;
+    background:white;
+    width:230px;
+    border-radius:10px;
+    box-shadow:0 8px 25px #0004;
+    z-index:20;
+    overflow:hidden;
+}
+
+.dropdown a{
+    display:block;
+    padding:11px 15px;
+    text-decoration:none;
+    color:#172033;
+    border-bottom:1px solid #eee;
+}
+
+.dropdown a:hover{
+    background:#edf5ff;
+    color:#0758a5;
+}
+
+.menu:hover .dropdown{
+    display:block;
+}
+
+nav{
+    background:white;
+    border-bottom:1px solid #e3e8ef;
+}
+
+.navin{
+    max-width:1100px;
+    margin:auto;
+    display:flex;
+    gap:4px;
+    padding:7px 10px;
+    overflow:auto;
+}
+
+.navin a{
+    white-space:nowrap;
+    text-decoration:none;
+    color:#172033;
+    padding:8px 13px;
+    border-radius:7px;
+    font-weight:bold;
+    font-size:14px;
+}
+
+.navin a:hover,
+.navin .active{
+    background:#eaf3ff;
+    color:#0758a5;
+}
+
+main{
+    max-width:1100px;
+    margin:25px auto;
+    padding:0 16px;
+}
+
+/* HERO */
+
+.hero{
+    background:linear-gradient(135deg,#e6f3ff,#ffffff);
+    padding:55px 20px;
+    text-align:center;
+    border-radius:18px;
+    box-shadow:0 4px 15px #0000000d;
+    border:1px solid #dce9f7;
+}
+
+.hero h2{
+    font-size:35px;
+    color:#063b7a;
+    margin-bottom:10px;
+}
+
+.hero p{
+    color:#596779;
+    font-size:16px;
+}
+
+.buttons{
+    margin-top:20px;
+}
+
+.btn{
+    display:inline-block;
+    background:#075db0;
+    color:white;
+    padding:10px 17px;
+    border-radius:7px;
+    text-decoration:none;
+    font-weight:bold;
+    margin:4px;
+}
+
+.btn:hover{
+    background:#063b7a;
+}
+
+/* SECTION */
+
+section{
+    margin-top:28px;
+}
+
+.section-title{
+    color:#073b7a;
+    border-left:5px solid #ffb703;
+    padding-left:10px;
+    margin-bottom:16px;
+}
+
+/* NOTICE */
+
+.notice{
+    background:white;
+    border-radius:12px;
+    border:1px solid #e2e8f0;
+    overflow:hidden;
+    box-shadow:0 3px 12px #0000000b;
+}
+
+.notice-item{
+    padding:13px 16px;
+    border-bottom:1px solid #eee;
+}
+
+.notice-item:last-child{
+    border-bottom:0;
+}
+
+.notice-item strong{
+    color:#0758a5;
+}
+
+/* CARDS */
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+}
+
+.card{
+    background:white;
+    border:1px solid #e2e8f0;
+    border-radius:12px;
+    padding:20px;
+    box-shadow:0 3px 12px #0000000b;
+}
+
+.card h3{
+    color:#0758a5;
+    margin-bottom:7px;
+}
+
+.card p{
+    color:#596779;
+}
+
+/* QUICK LINKS */
+
+.links{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:12px;
+}
+
+.link-box{
+    background:white;
+    padding:17px;
+    text-align:center;
+    border-radius:10px;
+    text-decoration:none;
+    color:#073b7a;
+    font-weight:bold;
+    border:1px solid #e2e8f0;
+    box-shadow:0 2px 8px #00000009;
+}
+
+.link-box:hover{
+    background:#edf5ff;
+}
+
+/* FOOTER */
+
+footer{
+    background:#092d58;
+    color:#dcecff;
+    padding:28px 16px;
+    text-align:center;
+    margin-top:35px;
+}
+
+footer h3{
+    margin-bottom:7px;
+}
+
+footer p{
+    font-size:14px;
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+    .title h1{
+        font-size:19px;
+    }
+
+    .logo{
+        width:52px;
+        height:52px;
+    }
+
+    .hero{
+        padding:40px 16px;
+    }
+
+    .hero h2{
+        font-size:27px;
+    }
+
+    .grid{
+        grid-template-columns:1fr;
+    }
+
+    .links{
+        grid-template-columns:1fr 1fr;
+    }
+}
+</style>
+</head>
+
 <body>
-<header><div class="top">
-<img class="logo" src="https://images.seeklogo.com/logo-png/30/1/dhaka-state-college-logo-png_seeklogo-301073.png" alt="Dhaka State College Logo">
-<div class="title"><h1>Dhaka State College</h1><p>Nurjahan Road, Mohammadpur, Dhaka-1207</p></div>
-<div class="menu"><button>⋮</button><div class="dropdown"><a href="news.html">College News</a><a href="jobs.html">Job News</a><a href="gallery.html">College Picture</a><a href="qualifications.html">Education Qualifications</a><a href="downloads.html">Download</a><a href="contact.html">Contact</a></div></div>
-</div></header>
-<nav><div class="navin"><a class="active" href="index.html">Home</a><a class="" href="news.html">College News</a><a class="" href="jobs.html">Job News</a><a class="" href="gallery.html">College Picture</a><a class="" href="qualifications.html">Education Qualifications</a><a class="" href="downloads.html">Download</a></div></nav>
-<main>
-<div class="hero">
-<h2>Welcome to Dhaka State College</h2>
-<p>শিক্ষা, উন্নতি ও সততার মাধ্যমে শিক্ষার্থীদের সুন্দর ভবিষ্যৎ গড়ে তোলার প্রত্যয়ে ঢাকা স্টেট কলেজ।</p>
+
+<header>
+
+<div class="top">
+
+<img class="logo"
+src="https://images.seeklogo.com/logo-png/30/1/dhaka-state-college-logo-png_seeklogo-301073.png"
+alt="Dhaka State College Logo">
+
+<div class="title">
+<h1>Dhaka State College</h1>
+<p>Nurjahan Road, Mohammadpur, Dhaka-1207</p>
 </div>
+
+<div class="menu">
+
+<button>⋮</button>
+
+<div class="dropdown">
+<a href="news.html">College News</a>
+<a href="jobs.html">Job News</a>
+<a href="gallery.html">College Picture</a>
+<a href="qualifications.html">Education Qualifications</a>
+<a href="downloads.html">Download</a>
+<a href="contact.html">Contact</a>
+</div>
+
+</div>
+</div>
+</header>
+
+<nav>
+
+<div class="navin">
+
+<a class="active" href="index.html">Home</a>
+<a href="news.html">College News</a>
+<a href="jobs.html">Job News</a>
+<a href="gallery.html">College Picture</a>
+<a href="qualifications.html">Education Qualifications</a>
+<a href="downloads.html">Download</a>
+
+</div>
+
+</nav>
+
+<main>
+
+<!-- HERO -->
+
+<div class="hero">
+
+<h2>Welcome to Dhaka State College</h2>
+
+<p>
+শিক্ষা, উন্নতি ও সততার মাধ্যমে শিক্ষার্থীদের সুন্দর ভবিষ্যৎ গড়ে তোলার প্রত্যয়ে ঢাকা স্টেট কলেজ।
+</p>
+
+<div class="buttons">
+
+<a class="btn" href="news.html">College News</a>
+
+<a class="btn" href="contact.html">Contact Us</a>
+
+</div>
+
+</div>
+
+
+<!-- NOTICE -->
+
+<section>
+
+<h2 class="section-title">📢 Notice Board</h2>
+
+<div class="notice">
+
+<div class="notice-item">
+<strong>Notice:</strong>
+কলেজের সকল গুরুত্বপূর্ণ নোটিশ এখানে প্রকাশ করা হবে।
+</div>
+
+<div class="notice-item">
+<strong>Academic:</strong>
+ক্লাস ও পরীক্ষার সময়সূচি জানতে Download বিভাগ দেখুন।
+</div>
+
+<div class="notice-item">
+<strong>Important:</strong>
+নতুন সংবাদ ও চাকরির বিজ্ঞপ্তির জন্য আমাদের ওয়েবসাইট নিয়মিত দেখুন।
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section>
+
+<h2 class="section-title">🏫 About Dhaka State College</h2>
+
+<div class="card">
+
+<p>
+ঢাকা স্টেট কলেজ শিক্ষার্থীদের মানসম্মত শিক্ষা ও সুন্দর ভবিষ্যৎ গঠনের লক্ষ্যে কাজ করে যাচ্ছে। 
+শিক্ষার্থীদের জ্ঞান, দক্ষতা ও নৈতিক মূল্যবোধ বিকাশে শিক্ষার পাশাপাশি বিভিন্ন কার্যক্রম গুরুত্বপূর্ণ ভূমিকা পালন করে।
+</p>
+
+</div>
+
+</section>
+
+
+<!-- ACADEMIC -->
+
+<section>
+
+<h2 class="section-title">📚 Academic Information</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Accounting</h3>
+<p>হিসাববিজ্ঞান বিষয়ে শিক্ষার্থীদের একাডেমিক জ্ঞান ও দক্ষতা অর্জনের সুযোগ।</p>
+</div>
+
+<div class="card">
+<h3>Academic Activities</h3>
+<p>নিয়মিত ক্লাস, পরীক্ষা ও বিভিন্ন শিক্ষামূলক কার্যক্রম।</p>
+</div>
+
+<div class="card">
+<h3>Student Development</h3>
+<p>শিক্ষার্থীদের জ্ঞান, দক্ষতা ও ভবিষ্যৎ ক্যারিয়ার উন্নয়নে সহযোগিতা।</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- QUICK LINKS -->
+
+<section>
+
+<h2 class="section-title">🔗 Quick Links</h2>
+
+<div class="links">
+
+<a class="link-box" href="news.html">
+📰<br>College News
+</a>
+
+<a class="link-box" href="jobs.html">
+💼<br>Job News
+</a>
+
+<a class="link-box" href="gallery.html">
+🖼️<br>Gallery
+</a>
+
+<a class="link-box" href="downloads.html">
+📥<br>Downloads
+</a>
+
+</div>
+
+</section>
+
 </main>
-<footer>© 2026 Dhaka State College | All Rights Reserved</footer>
-</body></html>
+
+
+<footer>
+
+<h3>Dhaka State College</h3>
+
+<p>Nurjahan Road, Mohammadpur, Dhaka-1207</p>
+
+<p>© 2026 Dhaka State College | All Rights Reserved</p>
+
+</footer>
+
+</body>
+</html>
